@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd ../../../oceantea-visualization-gateway
+cd ../..
+git pull
+cd ../oceantea-visualization-gateway
 git pull
 cd ../oceantea-auth
 git pull
