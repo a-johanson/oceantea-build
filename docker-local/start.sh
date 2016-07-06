@@ -2,6 +2,7 @@
 
 workDir=$(pwd)
 
+# NOTE: This is specific for MS Windows!
 toolboxDir=$(echo "/$DOCKER_TOOLBOX_INSTALL_PATH" | sed -e 's/\\/\//g' -e 's/://')
 cd "$toolboxDir"
 ./start.sh echo "return to script"
@@ -50,4 +51,5 @@ runContainer oceantea-time-series-conversion 3337
 
 MACHINEIP="$(docker-machine ip)"
 echo "Open http://${MACHINEIP}:3333 in browser..."
+# NOTE: This is specific for MS Windows!
 start "http://${MACHINEIP}:3333"

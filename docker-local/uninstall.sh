@@ -2,6 +2,7 @@
 
 workDir=$(pwd)
 
+# NOTE: This is specific for MS Windows!
 toolboxDir=$(echo "/$DOCKER_TOOLBOX_INSTALL_PATH" | sed -e 's/\\/\//g' -e 's/://')
 cd "$toolboxDir"
 ./start.sh echo "return to script"
