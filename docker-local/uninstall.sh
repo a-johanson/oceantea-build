@@ -1,9 +1,12 @@
 #!/bin/bash
 
+workDir=$(pwd)
+
 toolboxDir=$(echo "/$DOCKER_TOOLBOX_INSTALL_PATH" | sed -e 's/\\/\//g' -e 's/://')
 cd "$toolboxDir"
 ./start.sh echo "return to script"
 
+cd "$workDir"
 eval "$(docker-machine env default)"
 
 docker stop oceantea-visualization-gateway-inst
