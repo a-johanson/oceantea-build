@@ -1,4 +1,3 @@
-
 [Setup]
 AppName=OceanTEA
 AppVersion=1
@@ -7,6 +6,7 @@ DefaultGroupName=OceanTEA
 Compression=none
 ArchitecturesAllowed=x64
 ArchitecturesInstallIn64BitMode=x64
+ChangesEnvironment=yes
 
 [Files]
 Source: "Git-2.9.0-64-bit.exe"; DestDir: "{app}"; Flags: ignoreversion
@@ -27,3 +27,4 @@ Filename: "{pf64}\Git\bin\bash.exe"; Parameters: "--login ""{app}\scripts\uninst
 
 [UninstallDelete]
 Type: filesandordirs; Name: "{app}\scripts"
+Type: dirifempty; Name: "{app}\scripts"

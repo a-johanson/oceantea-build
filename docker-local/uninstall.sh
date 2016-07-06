@@ -16,7 +16,16 @@ docker stop oceantea-scalar-time-series-inst
 docker stop oceantea-vector-time-series-inst
 docker stop oceantea-time-series-conversion-inst
 
-./remove_containers.sh
-./remove_images.sh
+docker rm oceantea-visualization-gateway-inst
+docker rm oceantea-auth-inst
+docker rm oceantea-scalar-time-series-inst
+docker rm oceantea-vector-time-series-inst
+docker rm oceantea-time-series-conversion-inst
+
+docker rmi oceantea-visualization-gateway
+docker rmi oceantea-auth
+docker rmi oceantea-scalar-time-series
+docker rmi oceantea-vector-time-series
+docker rmi oceantea-time-series-conversion
 
 docker-machine stop
