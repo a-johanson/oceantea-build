@@ -9,13 +9,13 @@ ArchitecturesInstallIn64BitMode=x64
 ChangesEnvironment=yes
 
 [Files]
-Source: "Git-2.9.0-64-bit.exe"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "Git-2.9.0-64-bit.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "DockerToolbox-1.11.2.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\..\docker-local\*"; DestDir: "{app}\scripts"; Flags: ignoreversion
 Source: ".\docker-quickstart-terminal.ico"; DestDir: "{app}"; Flags: ignoreversion
 
 [Run]
-Filename: "{app}\Git-2.9.0-64-bit.exe"; Parameters: "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-"
+;Filename: "{app}\Git-2.9.0-64-bit.exe"; Parameters: "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-"
 Filename: "{app}\DockerToolbox-1.11.2.exe"; Parameters: "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-"
 
 [Icons]
