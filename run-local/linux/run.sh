@@ -32,4 +32,11 @@ nohup node index.js > std.out 2> std.err < /dev/null &
 cd ../oceantea-vector-time-series
 nohup python3 server.py > std.out 2> std.err < /dev/null &
 
+
+
+cd ../oceantea-coral-analysis
+nohup python3 server.py > std.out 2> std.err < /dev/null &
+
+
+
 cd ../oceantea-build/run-local/linux

@@ -14,4 +14,8 @@ cd ../oceantea-spatial-analysis
 git pull
 cd ../oceantea-vector-time-series
 git pull
+
+cd ../oceantea-coral-analysis
+git pull
+
 cd ../oceantea-build/run-local/linux
