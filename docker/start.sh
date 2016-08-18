@@ -36,7 +36,6 @@ function runContainer {
 
 runContainer oceantea-auth
 runContainer oceantea-time-series-conversion
-# TODO: Does the // trick work on Mac/Linux too?
 runContainer oceantea-vector-time-series -v oceantea-vector-vol://usr/src/app/data
 runContainer oceantea-scalar-time-series --link oceantea-time-series-conversion-inst -v oceantea-scalar-vol://usr/src/app/data
 runContainer oceantea-visualization-gateway -p 3333:3333 --link oceantea-auth-inst --link oceantea-time-series-conversion-inst --link oceantea-vector-time-series-inst --link oceantea-scalar-time-series-inst
@@ -44,5 +43,5 @@ runContainer oceantea-visualization-gateway -p 3333:3333 --link oceantea-auth-in
 
 read -p "Press enter to start OceanTEA..." ignore_input_variable
 echo "Opening http://localhost:3333 in browser..."
-# NOTE: This is specific for MS Windows!
 start "http://localhost:3333"
+open "http://localhost:3333"
