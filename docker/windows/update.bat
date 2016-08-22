@@ -1,5 +1,7 @@
 @ECHO OFF
 
+call start_docker4win.bat
+
 docker pull ajohanson/oceantea-auth
 docker pull ajohanson/oceantea-time-series-conversion
 docker pull ajohanson/oceantea-vector-time-series
