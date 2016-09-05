@@ -25,9 +25,7 @@ npm update
 nohup node index.js > std.out 2> std.err < /dev/null &
 
 cd ../oceantea-spatial-analysis
-npm install
-npm update
-nohup node index.js > std.out 2> std.err < /dev/null &
+nohup python3 server.py > std.out 2> std.err < /dev/null &
 
 cd ../oceantea-vector-time-series
 nohup python3 server.py > std.out 2> std.err < /dev/null &

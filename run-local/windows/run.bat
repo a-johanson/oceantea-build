@@ -19,9 +19,7 @@ call npm update
 start /b cmd /c node index.js
 
 cd ../oceantea-spatial-analysis
-call npm install
-call npm update
-start /b cmd /c node index.js
+start /b cmd /c python server.py
 
 cd ../oceantea-vector-time-series
 start /b cmd /c python server.py
