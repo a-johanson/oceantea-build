@@ -6,6 +6,7 @@ function pullImage {
 
 pullImage oceantea-auth
 pullImage oceantea-time-series-conversion
+pullImage oceantea-spatial-analysis
 pullImage oceantea-vector-time-series
 pullImage oceantea-scalar-time-series
 pullImage oceantea-visualization-gateway
@@ -22,6 +23,7 @@ function createVolume {
 
 createVolume oceantea-scalar-vol
 createVolume oceantea-vector-vol
+createVolume oceantea-bathymetry-vol
 
 
 function runContainer {
@@ -36,9 +38,10 @@ function runContainer {
 
 runContainer oceantea-auth
 runContainer oceantea-time-series-conversion
+runContainer oceantea-spatial-analysis -v oceantea-bathymetry-vol://usr/src/app/data
 runContainer oceantea-vector-time-series -v oceantea-vector-vol://usr/src/app/data
 runContainer oceantea-scalar-time-series --link oceantea-time-series-conversion-inst -v oceantea-scalar-vol://usr/src/app/data
-runContainer oceantea-visualization-gateway -p 3333:3333 --link oceantea-auth-inst --link oceantea-time-series-conversion-inst --link oceantea-vector-time-series-inst --link oceantea-scalar-time-series-inst
+runContainer oceantea-visualization-gateway -p 3333:3333 --link oceantea-auth-inst --link oceantea-time-series-conversion-inst --link oceantea-spatial-analysis-inst --link oceantea-vector-time-series-inst --link oceantea-scalar-time-series-inst
 
 
 read -p "Press enter to start OceanTEA..." ignore_input_variable

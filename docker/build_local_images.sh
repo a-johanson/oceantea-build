@@ -19,6 +19,7 @@ function createImage {
 
 createImage oceantea-auth
 createImage oceantea-time-series-conversion
+createImage oceantea-spatial-analysis
 createImage oceantea-vector-time-series
 createImage oceantea-scalar-time-series
 createImage oceantea-visualization-gateway
