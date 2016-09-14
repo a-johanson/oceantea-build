@@ -24,4 +24,7 @@ start /b cmd /c python server.py
 cd ../oceantea-vector-time-series
 start /b cmd /c python server.py
 
+cd ../oceantea-coral-analysis
+start /b cmd /c python server.py
+
 cd ../oceantea-build/run-local/windows
